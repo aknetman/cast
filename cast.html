@@ -28,6 +28,8 @@
     <script src="pixi.min.js"></script>
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
+
+
       window.onload = function() {
         cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
         window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
@@ -85,6 +87,12 @@
         document.getElementById("message").innerHTML=text;
         window.castReceiverManager.setApplicationState(text);
       };
+
+	function changespeed(text) {
+	     if (text == "fast"){
+		xstepsize = 30;
+	     }
+	};
 
 
 //Test that Pixi is working
